@@ -19,6 +19,7 @@ export class BudgetsController {
   constructor() {
     _drawBudgets()
     appState.on('budgets', _drawBudgets)
+    appState.on('saves', _drawBudgets)
   }
 
 

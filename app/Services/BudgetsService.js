@@ -1,6 +1,7 @@
 import { appState } from "../AppState.js"
 import { Budget } from "../Models/Budget.js"
 import { BudgetsController } from "../Controllers/BudgetsController.js"
+import { saveState } from "../Utils/Store.js"
 
 
 class BudgetsService {
@@ -12,7 +13,7 @@ class BudgetsService {
     let budget = new Budget(formData)
     appState.budgets = [budget, ...appState.budgets]
     console.log(appState.budgets);
-    // NOTE add save state here 
+    saveState('saves', appState.budgets)
 
   }
 

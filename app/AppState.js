@@ -1,4 +1,5 @@
 import { Budget } from "./Models/Budget.js"
+import { Save } from "./Models/Save.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -10,7 +11,9 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Budget').Budget[]} */
   budgets = loadState('budgets', Budget)
+  saves = loadState('saves', Save)
 }
+
 
 export const appState = new Proxy(new AppState(), {
   get(target, prop) {
