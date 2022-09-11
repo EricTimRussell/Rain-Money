@@ -13,8 +13,13 @@ class BudgetsService {
     let budget = new Budget(formData)
     appState.budgets = [budget, ...appState.budgets]
     console.log(appState.budgets);
+<<<<<<< HEAD
     saveState('saves', appState.budgets)
 
+=======
+    // NOTE add save state here 
+    saveState('budgets', appState.budgets)
+>>>>>>> 10f10edf79e74da793ea25c62b0d86a1daacd120
   }
 
 
